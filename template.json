@@ -1,5 +1,5 @@
 {
-  "script": {
+  "scripts": {
     "postinstall": "npm install --cwd api"
   },
   "dependencies": {
