@@ -1,8 +1,10 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { remove, copy } = require('fs-extra');
+const { remove, copy, emptyDir } = require('fs-extra');
 
 (async () => {
   try {
+    // Empty the template
+    await emptyDir('../template');
     // Handle api directory
     await remove('api/node_modules');
     await remove('api/dist');
