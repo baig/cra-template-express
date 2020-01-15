@@ -30,7 +30,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "template": "node create-template.js"
+    "template": "node create-template.js",
+    "postinstall": "yarn install --cwd api"
   },
   "eslintConfig": {
     "extends": "react-app"
