@@ -1,0 +1,24 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { remove, copy } = require('fs-extra');
+
+(async () => {
+  try {
+    // Handle api directory
+    await remove('api/node_modules');
+    await remove('api/dist');
+    await copy('api', '../template/api');
+    // Handle public directory
+    await copy('public', '../template/public');
+    // Handle src directory
+    await copy('src', '../template/src');
+    // Handle each files
+    await copy('.editorconfig', '../template/.editorconfig');
+    await copy('.eslintignore', '../template/.eslintignore');
+    await copy('.eslintrc', '../template/.eslintrc');
+    await copy('.prettierrc', '../template/.prettierrc');
+    await copy('README.md', '../template/README.md');
+    await copy('.gitignore', '../template/gitignore');
+  } catch (error) {
+    console.log(error);
+  }
+})();
