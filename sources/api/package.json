@@ -1,7 +1,6 @@
 {
   "name": "api",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "typeorm": "ts-node ./node_modules/typeorm/cli.js",
     "clean": "rimraf dist",
