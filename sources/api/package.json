@@ -4,11 +4,11 @@
   "license": "UNLICENSED",
   "scripts": {
     "typeorm": "ts-node ./node_modules/typeorm/cli.js",
-    "clean": "rimraf dist",
+    "clean": "rimraf build",
     "prebuild": "yarn clean",
     "build": "tsc",
     "start": "tsnd --respawn --no-notify --transpileOnly src/index.ts",
-    "start:prod": "NODE_ENV=production node dist/index.js"
+    "start:prod": "NODE_ENV=production node build/index.js"
   },
   "dependencies": {
     "@types/bcrypt": "^3.0.0",

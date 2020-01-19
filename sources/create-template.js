@@ -7,7 +7,7 @@ const { remove, copy, emptyDir } = require('fs-extra');
     await emptyDir('../template');
     // Handle api directory
     await remove('api/node_modules');
-    await remove('api/dist');
+    await remove('api/build');
     await copy('api', '../template/api');
     await remove('../template/api/yarn.lock');
     // Handle public directory

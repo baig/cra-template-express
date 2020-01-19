@@ -3,7 +3,7 @@ import { ConnectionOptions } from 'typeorm';
 import { join } from 'path';
 import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
 
-const baseFolder = config.app.env === 'production' ? 'dist' : 'src';
+const baseFolder = config.app.env === 'production' ? 'build' : 'src';
 
 export const database = {
   type: config.db.dialect,
