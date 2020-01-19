@@ -23,6 +23,7 @@
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
+    "rimraf": "^3.0.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
@@ -31,7 +32,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "template": "node create-template.js",
-    "postinstall": "yarn install --cwd api"
+    "build:all": "cd api && yarn build && cd .. && yarn build",
+    "distribute": "rimraf dist && yarn build:all && node distribute.js"
   },
   "eslintConfig": {
     "extends": "react-app"
