@@ -33,7 +33,7 @@
     "eject": "react-scripts eject",
     "template": "node create-template.js",
     "postinstall": "cd api && yarn install",
-    "build:all": "cd api && yarn build && cd .. && yarn build",
+    "build:all": "cd api && yarn build && cd ../ && yarn build",
     "distribute": "rimraf dist && yarn build:all && node distribute.js"
   },
   "eslintConfig": {

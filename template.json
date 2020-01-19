@@ -1,7 +1,7 @@
 {
   "scripts": {
     "postinstall": "cd api && npm install",
-    "build:all": "cd api && npm run build && cd .. && npm run build",
+    "build:all": "cd api && npm run build && cd ../ && npm run build",
     "distribute": "rimraf dist && npm run build:all && node distribute.js"
   },
   "dependencies": {
