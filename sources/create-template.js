@@ -20,7 +20,7 @@ const { remove, copy, emptyDir } = require('fs-extra');
     await copy('.eslintrc', '../template/.eslintrc');
     await copy('.prettierrc', '../template/.prettierrc');
     await copy('tsconfig.json', '../template/tsconfig.json');
-    await copy('distribute.js', '../template/distribute.js');
+    await copy('bundle.js', '../template/bundle.js');
     await copy('README.md', '../template/README.md');
     await copy('.gitignore', '../template/gitignore');
   } catch (error) {

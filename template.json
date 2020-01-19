@@ -1,10 +1,7 @@
 {
   "scripts": {
     "postinstall": "cd api && npm install",
-    "build:api": "cd api && npm run build",
-    "build:client": "cd .. && npm run build",
-    "build:all": "npm run build:api && npm run build:client",
-    "distribute": "rimraf dist && npm run build:all && node distribute.js"
+    "bundle": "rimraf dist && node bundle.js"
   },
   "dependencies": {
     "@testing-library/react": "^9.3.2",
